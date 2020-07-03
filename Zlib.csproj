@@ -6,8 +6,8 @@
     <Platforms>x64</Platforms>
     <PlatformTarget>x64</PlatformTarget>
     <LangVersion>8</LangVersion>
-    <AssemblyVersion>1.0.3</AssemblyVersion>
-    <PackageVersion>1.0.3</PackageVersion>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <RootNamespace>System.IO.Compression</RootNamespace>
     <AssemblyName>Zlib.Bindings</AssemblyName>
     <IsPackable>true</IsPackable>
@@ -17,7 +17,7 @@
     <DefineConstants Condition="$(RuntimeIdentifier.StartsWith('win'))">WINDOWS</DefineConstants>
     <DefineConstants Condition="$(RuntimeIdentifier.StartsWith(`win`)) != true">UNIX</DefineConstants>
     <NoWarn>NU1603</NoWarn>
-    <RuntimeIdentifiers>win-x64;linux-x64;osx-x64</RuntimeIdentifiers>
+    <RuntimeIdentifiers>win-x64;debian.9-x64;debian.10-x64;ubuntu.16.04-x64;ubuntu.18.04-x64;centos.7-x64;centos.8-x64;osx-x64</RuntimeIdentifiers>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
@@ -31,9 +31,34 @@
       <PackagePath>runtimes/osx-x64/native</PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="runtimes\linux-x64\native\libz.so">
+    <Content Include="runtimes\ubuntu.16.04-x64\native\libz.so">
       <Pack>true</Pack>
-      <PackagePath>runtimes/linux-x64/native</PackagePath>
+      <PackagePath>runtimes/ubuntu.16.04-x64/native</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="runtimes\ubuntu.18.04-x64\native\libz.so">
+      <Pack>true</Pack>
+      <PackagePath>runtimes/ubuntu.18.04-x64/native</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="runtimes\debian.9-x64\native\libz.so">
+      <Pack>true</Pack>
+      <PackagePath>runtimes/debian.9-x64/native</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="runtimes\debian.10-x64\native\libz.so">
+      <Pack>true</Pack>
+      <PackagePath>runtimes/debian.10-x64/native</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="runtimes\centos.7-x64\native\libz.so">
+      <Pack>true</Pack>
+      <PackagePath>runtimes/centos.7-x64/native</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="runtimes\centos.8-x64\native\libz.so">
+      <Pack>true</Pack>
+      <PackagePath>runtimes/centos.8-x64/native</PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
