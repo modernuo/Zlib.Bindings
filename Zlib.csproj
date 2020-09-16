@@ -6,8 +6,8 @@
     <Platforms>x64</Platforms>
     <PlatformTarget>x64</PlatformTarget>
     <LangVersion>8</LangVersion>
-    <AssemblyVersion>1.2.0</AssemblyVersion>
-    <PackageVersion>1.2.0</PackageVersion>
+    <AssemblyVersion>1.3.0</AssemblyVersion>
+    <PackageVersion>1.3.0</PackageVersion>
     <RootNamespace>System.IO.Compression</RootNamespace>
     <AssemblyName>Zlib.Bindings</AssemblyName>
     <IsPackable>true</IsPackable>
