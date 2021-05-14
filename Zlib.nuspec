@@ -2,13 +2,13 @@
 <package>
   <metadata>
     <id>Zlib.Bindings</id>
-    <version>1.4.0</version>
+    <version>1.5.0</version>
     <authors>Kamron Batman</authors>
     <owners>Kamron Batman</owners>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/modernuo/zlib</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Zlib 1.2.11 Bindings for .NET 5</description>
-    <copyright>Copyright 2019-2020</copyright>
+    <copyright>Copyright 2021</copyright>
   </metadata>
 </package>
