@@ -6,8 +6,8 @@
     <Platforms>x64</Platforms>
     <PlatformTarget>x64</PlatformTarget>
     <LangVersion>preview</LangVersion>
-    <AssemblyVersion>1.7.0</AssemblyVersion>
-    <PackageVersion>1.7.0</PackageVersion>
+    <AssemblyVersion>1.7.1</AssemblyVersion>
+    <PackageVersion>1.7.1</PackageVersion>
     <RootNamespace>System.IO.Compression</RootNamespace>
     <AssemblyName>Zlib.Bindings</AssemblyName>
     <IsPackable>true</IsPackable>
@@ -54,6 +54,11 @@
     <Content Include="runtimes\debian.10-x64\native\libz.so">
       <Pack>true</Pack>
       <PackagePath>runtimes/debian.10-x64/native</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="runtimes\debian.11-x64\native\libz.so">
+      <Pack>true</Pack>
+      <PackagePath>runtimes/debian.11-x64/native</PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="runtimes\centos.7-x64\native\libz.so">

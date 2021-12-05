@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Zlib.Bindings</id>
-    <version>1.7.0</version>
+    <version>1.7.1</version>
     <authors>Kamron Batman</authors>
     <owners>Kamron Batman</owners>
     <license type="expression">MIT</license>
