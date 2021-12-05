@@ -58,6 +58,12 @@ COPY ./zlib-src ./zlib
 WORKDIR /zlib
 RUN ./configure && make
 
+FROM fedora:34 as fedora-34
+RUN dnf upgrade -y && dnf install -y gcc make
+COPY ./zlib-src ./zlib
+WORKDIR /zlib
+RUN ./configure && make
+
 FROM alpine:latest
 RUN mkdir -p ./runtimes/ubuntu.16.04-x64/native
 RUN mkdir -p ./runtimes/ubuntu.18.04-x64/native
@@ -65,12 +71,14 @@ RUN mkdir -p ./runtimes/ubuntu.20.04-x64/native
 
 RUN mkdir -p ./runtimes/debian.9-x64/native
 RUN mkdir -p ./runtimes/debian.10-x64/native
+RUN mkdir -p ./runtimes/debian.11-x64/native
 
 RUN mkdir -p ./runtimes/centos.7-x64/native
 RUN mkdir -p ./runtimes/centos.8-x64/native
 
 RUN mkdir -p ./runtimes/fedora.32-x64/native
 RUN mkdir -p ./runtimes/fedora.33-x64/native
+RUN mkdir -p ./runtimes/fedora.34-x64/native
 
 COPY --from=ubuntu-16 /zlib/libz.so.1 ./runtimes/ubuntu.16.04-x64/native/libz.so
 COPY --from=ubuntu-18 /zlib/libz.so.1 ./runtimes/ubuntu.18.04-x64/native/libz.so
@@ -85,3 +93,4 @@ COPY --from=centos-8 /zlib/libz.so.1 ./runtimes/centos.8-x64/native/libz.so
 
 COPY --from=fedora-32 /zlib/libz.so.1 ./runtimes/fedora.32-x64/native/libz.so
 COPY --from=fedora-33 /zlib/libz.so.1 ./runtimes/fedora.33-x64/native/libz.so
+COPY --from=fedora-34 /zlib/libz.so.1 ./runtimes/fedora.34-x64/native/libz.so

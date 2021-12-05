@@ -6,8 +6,8 @@
     <Platforms>x64</Platforms>
     <PlatformTarget>x64</PlatformTarget>
     <LangVersion>preview</LangVersion>
-    <AssemblyVersion>1.7.1</AssemblyVersion>
-    <PackageVersion>1.7.1</PackageVersion>
+    <AssemblyVersion>1.7.2</AssemblyVersion>
+    <PackageVersion>1.7.2</PackageVersion>
     <RootNamespace>System.IO.Compression</RootNamespace>
     <AssemblyName>Zlib.Bindings</AssemblyName>
     <IsPackable>true</IsPackable>
@@ -79,6 +79,11 @@
     <Content Include="runtimes\fedora.33-x64\native\libz.so">
       <Pack>true</Pack>
       <PackagePath>runtimes/fedora.33-x64/native</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="runtimes\fedora.34-x64\native\libz.so">
+      <Pack>true</Pack>
+      <PackagePath>runtimes/fedora.34-x64/native</PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
