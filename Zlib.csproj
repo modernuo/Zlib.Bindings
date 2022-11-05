@@ -5,16 +5,14 @@
         <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
         <Platforms>x64;arm64</Platforms>
         <LangVersion>preview</LangVersion>
-        <AssemblyVersion>1.10.0</AssemblyVersion>
-        <PackageVersion>1.10.0</PackageVersion>
+        <AssemblyVersion>1.10.1</AssemblyVersion>
+        <PackageVersion>1.10.1</PackageVersion>
         <RootNamespace>System.IO.Compression</RootNamespace>
         <AssemblyName>Zlib.Bindings</AssemblyName>
         <IsPackable>true</IsPackable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
         <Configurations>Debug;Release;Analyze</Configurations>
-        <DefineConstants Condition="$(RuntimeIdentifier.StartsWith('win'))">WINDOWS</DefineConstants>
-        <DefineConstants Condition="$(RuntimeIdentifier.StartsWith(`win`)) != true">UNIX</DefineConstants>
         <NoWarn>NU1603</NoWarn>
         <RuntimeIdentifiers>win-x64;win-arm64;linux-x64;linux-arm64;osx-x64;osx-arm64</RuntimeIdentifiers>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
