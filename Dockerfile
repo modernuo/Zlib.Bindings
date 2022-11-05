@@ -46,7 +46,13 @@ COPY ./zlib-src ./zlib
 WORKDIR /zlib
 RUN ./configure && make
 
-FROM centos:8 as centos-8
+FROM quay.io/centos/centos:stream8 as centos-8
+RUN yum update -y && yum install -y gcc make
+COPY ./zlib-src ./zlib
+WORKDIR /zlib
+RUN ./configure && make
+
+FROM quay.io/centos/centos:stream9 as centos-9
 RUN yum update -y && yum install -y gcc make
 COPY ./zlib-src ./zlib
 WORKDIR /zlib
@@ -116,6 +122,7 @@ COPY --from=debian-11 /zlib/libz.so.1 ./runtimes/debian.11-x64/native/libz.so
 
 COPY --from=centos-7 /zlib/libz.so.1 ./runtimes/centos.7-x64/native/libz.so
 COPY --from=centos-8 /zlib/libz.so.1 ./runtimes/centos.8-x64/native/libz.so
+COPY --from=centos-9 /zlib/libz.so.1 ./runtimes/centos.9-x64/native/libz.so
 
 COPY --from=fedora-32 /zlib/libz.so.1 ./runtimes/fedora.32-x64/native/libz.so
 COPY --from=fedora-33 /zlib/libz.so.1 ./runtimes/fedora.33-x64/native/libz.so
