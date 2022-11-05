@@ -1,7 +1,7 @@
-namespace System.IO.Compression
+namespace System.IO.Compression;
+
+public enum ZlibError
 {
-  public enum ZlibError
-  {
     VersionError = -6,
     BufferError = -5,
     MemoryError = -4,
@@ -11,5 +11,4 @@ namespace System.IO.Compression
     Okay = 0,
     StreamEnd = 1,
     NeedDictionary = 2
-  }
 }
